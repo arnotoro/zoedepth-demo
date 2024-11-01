@@ -14,7 +14,7 @@ zoe = model_zoe_n.to(DEVICE)
 
 # Load image
 from PIL import Image
-image = Image.open("image4.jpg")
+image = Image.open("photos/image.jpg")
 print("Image Size:", image.size)
 
 # As Numpy
@@ -47,7 +47,7 @@ Image.fromarray(colored).save(fpath_colored)
 
 # Object detection using YOLOv11
 from ultralytics import YOLO
-yolo = YOLO("yolo11n.pt")
+yolo = YOLO("yolo11x.pt")
 
 # Train the model
 # train_results = yolo.train(
@@ -62,7 +62,7 @@ yolo = YOLO("yolo11n.pt")
 
 
 # Perform object detection on an image
-results = yolo("image4.jpg")
+results = yolo("photos/image.jpg")
 
 import cv2
 all_bottom_centers = []
@@ -101,7 +101,7 @@ for result in results:
 
 print("Bottom Centers:", all_bottom_centers)
 print(top_left, bottom_right)
-print(depth_np)
+print(depth_np.max())
 
 
 # Depth map values for the bounding box
