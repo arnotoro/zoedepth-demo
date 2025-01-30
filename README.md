@@ -1,4 +1,4 @@
-# CCTV Camera Detection
+# CCTV Camera Detection Demo
 
 ## Instructions
 1. Clone the ZoeDepth repo: `git clone https://github.com/isl-org/ZoeDepth`
